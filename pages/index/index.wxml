@@ -1,0 +1,97 @@
+<!--index.wxml-->
+<view>
+  <view wx:if="{{isHide}}">
+    <view wx:if="{{canIUse}}">
+      <view class='header'>
+        <image src='../images/shgl.png'></image>
+      </view>
+      <view class='content'>
+        <view>申请获取以下权限</view>
+        <text>获得你的公开信息(昵称，头像等)</text>
+      </view>
+      <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="getUserInfo">
+        授权登录
+      </button>
+    </view>
+    <view wx:else>请升级微信版本</view>
+  </view>
+  <view wx:else>
+
+
+    <view>
+      <view style='display: flex;  align-items: center;'>
+        <view>
+          <image src="{{userInfo.avatarUrl}}" class="image"></image>
+        </view>
+        <view class="device-info">
+          <view style='font-size:15px'>设备名称：{{deviceName?deviceName:'暂无设备'}}</view>
+          <button style='width:100px;margin-left:0' bindtap='replenish' disabled="{{sign==''?true:false}}">补货</button>
+        </view>
+      </view>
+    </view>
+
+    <view wx:if="{{sign==''}}">
+      <view class='saoma'>
+      <i-icon type="scan" size="100" bindtap='scan'/>
+      <view>请先扫描小程序码</view>
+      </view>
+    </view>
+    <view wx:else>
+
+      <view class="order">
+        <view style='  display: flex; justify-content: space-between;'>
+          <view class="order-details" bindtap='operateOrder' data-id='1'>
+            <i-icon type="add" size="28" />
+            <view>加料左</view>
+          </view>
+          <view class="order-details" bindtap='operateOrder' data-id='2'>
+            <i-icon type="add" size="28" />
+            <view>加料右</view>
+          </view>
+        </view>
+        <view style='  display: flex; justify-content: space-between;'>
+          <view class="order-details" bindtap='operateOrder' data-id='3'>
+            <i-icon type="delete" size="28" />
+            <view>料桶左关</view>
+          </view>
+          <view class="order-details" bindtap='operateOrder' data-id='4'>
+            <i-icon type="delete" size="28" />
+            <view>料桶右关</view>
+          </view>
+        </view>
+        <view style='  display: flex; justify-content: space-between;'>
+          <view class="order-details" bindtap='operateOrder' data-id='5'>
+            <i-icon type="trash" size='28' />
+            <view>清料左</view>
+          </view>
+          <view class="order-details" bindtap='operateOrder' data-id='6'>
+            <i-icon type="trash" size='28' />
+            <view>清料右</view>
+          </view>
+        </view>
+       
+         <view style='  display: flex; justify-content: space-between;'>
+          <view class="order-details" bindtap='operateOrder' data-id='7'>
+            <i-icon type="editor" size="28" />
+            <view>搅拌左</view>
+          </view>
+          <view class="order-details" bindtap='operateOrder' data-id='8'>
+            <i-icon type="editor" size="28" />
+            <view>搅拌右</view>
+          </view>
+        </view>
+         <view style='  display: flex; justify-content: space-between;'>
+          <view class="order-details" bindtap='operateOrder' data-id='9'>
+            <i-icon type="offline" size="28" />
+            <view>配件进位左</view>
+          </view>
+          <view class="order-details" bindtap='operateOrder' data-id='10'>
+            <i-icon type="offline" size="28" />
+            <view>配件进位右</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<i-message id="message" />

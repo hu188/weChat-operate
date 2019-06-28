@@ -1,0 +1,81 @@
+/**index.wxss**/
+
+/* 微信授权 */
+
+.header {
+  margin: 90rpx 0 90rpx 50rpx;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  width: 650rpx;
+  height: 300rpx;
+  line-height: 450rpx;
+}
+
+.header image {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.content {
+  margin-left: 50rpx;
+  margin-bottom: 90rpx;
+}
+
+.content text {
+  display: block;
+  color: #9d9d9d;
+  margin-top: 40rpx;
+}
+
+.bottom {
+  border-radius: 80rpx;
+  margin: 70rpx 50rpx;
+  font-size: 35rpx;
+}
+
+/* ----- */
+
+.device-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap:wrap;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  margin: 0 30px 0 20px;
+  border-radius:50% 
+}
+
+.order {
+  width: 86%;
+  height: auto;
+  border-radius: 10px;
+  margin-left: 7%;
+  margin-top: 20px;
+  /* box-shadow:5px 5px 20px rgb(233, 227, 227); */
+  box-shadow: darkgrey 2px 2px 10px 2px;
+}
+
+.order-details {
+  background: rgba(31, 148, 234, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  /* box-shadow: darkgrey 1px 1px 10px 2px ; */
+  width: 100px;
+  height: 70px;
+  margin: 10px 20px 10px 20px;
+}
+.saoma{
+  width: 60%;
+margin-top: 100px;
+  margin-left: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
